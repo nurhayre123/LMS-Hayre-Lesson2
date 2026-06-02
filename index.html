@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Python Programming Full Course</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--primary:#2563eb;
+--bg:#f1f5f9;
+--card:#ffffff;
+--text:#0f172a;
+--sidebar:#0f172a;
+--shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.dark{
+--bg:#020617;
+--card:#0f172a;
+--text:#f8fafc;
+--sidebar:#000814;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+transition:.3s;
+}
+
+.container{
+display:flex;
+min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:280px;
+background:var(--sidebar);
+color:white;
+padding:25px;
+position:fixed;
+height:100vh;
+overflow-y:auto;
+}
+
+.logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.logo img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid white;
+margin-bottom:10px;
+}
+
+.logo h2{
+font-size:1rem;
+color:#60a5fa;
+}
+
+.logo p{
+font-size:.8rem;
+opacity:.7;
+}
+
+/* NAV */
+.nav-btn{
+width:100%;
+padding:12px;
+margin-bottom:8px;
+background:#1e293b;
+border:none;
+color:white;
+border-radius:10px;
+cursor:pointer;
+text-align:left;
+transition:.3s;
+}
+
+.nav-btn:hover{
+background:var(--primary);
+transform:translateX(5px);
+}
+
+/* MAIN */
+.main{
+margin-left:280px;
+padding:30px;
+width:100%;
+}
+
+.section{
+background:var(--card);
+padding:30px;
+border-radius:20px;
+box-shadow:var(--shadow);
+margin-bottom:25px;
+}
+
+h1,h2,h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+p{
+line-height:1.6;
+margin-bottom:10px;
+}
+
+.card{
+background:#eff6ff;
+padding:15px;
+border-left:5px solid var(--primary);
+margin:10px 0;
+border-radius:10px;
+}
+
+pre{
+background:#0f172a;
+color:white;
+padding:15px;
+border-radius:10px;
+overflow-x:auto;
+}
+
+button{
+margin-top:10px;
+padding:10px 15px;
+border:none;
+background:var(--primary);
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+ul{
+margin-left:20px;
+line-height:1.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="picture.jpg">
+
+<h2>Created by</h2>
+<p>Professor Nur-Asrhi J. Hayre</p>
+
+</div>
+
+<button class="nav-btn" onclick="scrollToSection('intro')">📘 Introduction</button>
+<button class="nav-btn" onclick="scrollToSection('syntax')">🧠 Syntax</button>
+<button class="nav-btn" onclick="scrollToSection('variables')">📦 Variables</button>
+<button class="nav-btn" onclick="scrollToSection('datatypes')">🔢 Data Types</button>
+<button class="nav-btn" onclick="scrollToSection('operators')">➕ Operators</button>
+<button class="nav-btn" onclick="scrollToSection('conditions')">🔀 Conditionals</button>
+<button class="nav-btn" onclick="scrollToSection('loops')">🔁 Loops</button>
+<button class="nav-btn" onclick="scrollToSection('functions')">⚙ Functions</button>
+<button class="nav-btn" onclick="scrollToSection('summary')">📚 Summary</button>
+<button class="nav-btn" onclick="openLink()">
+🐍 Python Online Compiler
+</button>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- INTRO -->
+<div class="section" id="intro">
+
+<h1>🐍 Python Programming Full Course</h1>
+
+<p>
+Python is a high-level programming language used in web development, artificial intelligence, data science, automation, and game development.
+</p>
+
+<div class="card">
+Python is known for:
+<br>
+✔ Simple syntax  
+✔ Easy readability  
+✔ Beginner-friendly structure  
+</div>
+
+</div>
+
+<!-- SYNTAX -->
+<div class="section" id="syntax">
+
+<h2>🧠 Python Syntax</h2>
+
+<p>Syntax is the set of rules that define how Python code must be written.</p>
+
+<pre>
+print("Hello World")
+</pre>
+
+<p>
+Python does NOT use semicolons or braces like other languages.
+Indentation is very important.
+</p>
+
+<pre>
+if 5 > 2:
+    print("Five is greater")
+</pre>
+
+</div>
+
+<!-- VARIABLES -->
+<div class="section" id="variables">
+
+<h2>📦 Variables</h2>
+
+<p>Variables store data values.</p>
+
+<div class="card">
+Think of variables as labeled containers that store information.
+</div>
+
+<pre>
+name = "Juan"
+age = 18
+grade = 90
+
+print(name)
+print(age)
+</pre>
+
+<p>
+Variables can change anytime:
+</p>
+
+<pre>
+age = 18
+age = 19
+print(age)
+</pre>
+
+</div>
+
+<!-- DATA TYPES -->
+<div class="section" id="datatypes">
+
+<h2>🔢 Data Types</h2>
+
+<p>Python has different types of data used in programs.</p>
+
+<h3>1. String (str)</h3>
+<p>Text data</p>
+
+<pre>
+name = "Juan"
+</pre>
+
+<h3>2. Integer (int)</h3>
+<p>Whole numbers</p>
+
+<pre>
+age = 20
+</pre>
+
+<h3>3. Float</h3>
+<p>Decimal numbers</p>
+
+<pre>
+price = 10.5
+</pre>
+
+<h3>4. Boolean</h3>
+<p>True or False values</p>
+
+<pre>
+is_student = True
+</pre>
+
+<div class="card">
+Each data type is used depending on the problem you are solving.
+</div>
+
+</div>
+
+<!-- OPERATORS -->
+<div class="section" id="operators">
+
+<h2>➕ Operators</h2>
+
+<p>Operators are used to perform calculations.</p>
+
+<pre>
+a = 10
+b = 5
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+</pre>
+
+<div class="card">
++ addition  
+- subtraction  
+* multiplication  
+/ division  
+</div>
+
+</div>
+
+<!-- CONDITIONS -->
+<div class="section" id="conditions">
+
+<h2>🔀 Conditional Statements</h2>
+
+<p>Used for decision making.</p>
+
+<pre>
+age = 18
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+</pre>
+
+<div class="card">
+Programs can make decisions using if-else statements.
+</div>
+
+</div>
+
+<!-- LOOPS -->
+<div class="section" id="loops">
+
+<h2>🔁 Loops</h2>
+
+<p>Loops repeat actions automatically.</p>
+
+<h3>For Loop</h3>
+
+<pre>
+for i in range(5):
+    print("Hello")
+</pre>
+
+<h3>While Loop</h3>
+
+<pre>
+x = 1
+
+while x <= 5:
+    print(x)
+    x += 1
+</pre>
+
+<div class="card">
+Loops save time by repeating tasks automatically.
+</div>
+
+</div>
+
+<!-- FUNCTIONS -->
+<div class="section" id="functions">
+
+<h2>⚙ Functions</h2>
+
+<p>Functions are reusable blocks of code.</p>
+
+<pre>
+def greet():
+    print("Hello Student!")
+
+greet()
+</pre>
+
+<p>
+Functions help organize programs and avoid repetition.
+</p>
+
+</div>
+
+<!-- SUMMARY -->
+<div class="section" id="summary">
+
+<h2>📚 Summary</h2>
+
+<ul>
+<li>Python is simple and powerful</li>
+<li>Variables store data</li>
+<li>Data types define data</li>
+<li>Operators perform calculations</li>
+<li>Conditions make decisions</li>
+<li>Loops repeat actions</li>
+<li>Functions organize code</li>
+</ul>
+<div class="card">
+<strong>📌 Next Step:</strong><br><br>
+After finishing this lesson, click the<br>
+<b>🐍 Python Online Compiler</b> button on the left sidebar<br>
+to practice your code and try examples yourself.
+</div>
+<button onclick="alert('You finished the Python course!')">
+Finish Course
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+function toggleTheme(){
+    document.body.classList.toggle("dark");
+}
+
+function openModule(page){
+    window.location.href = page;
+}
+
+/* ✅ Python online compiler link */
+function openLink(){
+    window.open(
+        "https://www.programiz.com/python-programming/online-compiler/",
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
